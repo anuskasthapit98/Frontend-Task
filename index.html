@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Employee Form</title>
+</head>
+<body>
+    <p class="title">Employee Form</p>
+    <div class="container">
+        <form class="form-body">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputfname">First Name</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputlanme">Last Name</label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputDOB">Date of Birth</label>
+                <input type="date" class="form-control" id="inputDOB" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputGender4">Gender</label>
+               
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input align-items-center align-self-center" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label align-items-center align-self-center" for="inlineRadio1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input align-items-center align-self-center" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label align-items-center align-self-center" for="inlineRadio2">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input align-items-center align-self-center" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label align-items-center align-self-center" for="inlineRadio2">Others</label>
+                  </div>
+                </div>
+            </div>
+      
+              
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">Province</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Province No. 1</option>
+                  <option>Province No. 2</option>
+                  <option>Province No. 3</option>
+                  <option>Gandaki Pradesh</option>
+                  <option>Province No. 5</option>
+                  <option>Karnali Pradesh</option>
+                  <option>Sudurpashchim Pradesh</option>
+                  
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip Code</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPhone4">Phone</label>
+                  <input type="phone" class="form-control" id="inputPhonel4" placeholder="">
+                </div>
+              </div>
+              <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="inputDOB">Start Date</label>
+                <input type="date" class="form-control" id="startDate">
+              
+                     </div>
+                     <div class="form-group col-md-6">
+                        <label for="inputState">Designation</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>Junior Frontend Developer</option>
+                          <option>Senior Frontend Developer</option>
+                          <option>Junior Backend Developer</option>
+                          <option>Senior Beckend Developer</option>
+                          <option>Project Manager</option>
+                        </select>
+                      </div>
+              </div>
+              <div class="form-group float-right ">
+                <button type="submit" class="btn btn-secondary ">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+    </div>
+    
+</body>
+</html>

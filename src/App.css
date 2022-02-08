@@ -39,3 +39,6 @@
     }
   }
 
+  .not-required-label .ant-form-item-label {
+    padding-left: 10px;
+  }

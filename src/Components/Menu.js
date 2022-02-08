@@ -6,19 +6,11 @@ export default function Nav() {
   return (
     <div>
       <Menu mode="horizontal">
-        <Link to="/about">
-          <Menu.Item>About Us</Menu.Item>
-        </Link>
-
         <Link to="/form">
-          <Menu.Item>Employee Form</Menu.Item>
+          <Menu.Item>Attendence Form</Menu.Item>
         </Link>
         <Link to="/list">
-          <Menu.Item>Employee List</Menu.Item>
-        </Link>
-        
-        <Link to="/policy">
-          <Menu.Item>Password</Menu.Item>
+          <Menu.Item>Attendence Records</Menu.Item>
         </Link>
       </Menu>
     </div>

@@ -9,13 +9,10 @@ export default function App() {
   return (
     <div>
       <Router>
-        <Menu />
-        <Switch>
-          <Route path="/form" exact component={Form}>
-            <Form />
-          </Route>
-          <Route path="/list" exact component={List}></Route>
-        </Switch>
+        <Route path="/" exact component={Form}>
+          <Form />
+        </Route>
+        <Route path="/list" exact component={List}></Route>
       </Router>
     </div>
   );

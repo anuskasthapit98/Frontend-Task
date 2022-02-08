@@ -1,15 +1,13 @@
-import { Table, Tooltip, Modal, message } from "antd";
+import { Table, Tooltip, Modal, message,Button } from "antd";
 import moment from "moment";
-import {
-  EditOutlined,
-  SearchOutlined,
-  EyeOutlined,
-  DisconnectOutlined,
-} from "@ant-design/icons";
+import { useHistory } from "react-router-dom";
+import { EditOutlined, DisconnectOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
 
 const List = () => {
   const [loading, setLoading] = useState("false");
+  const history = useHistory();
+
   function removeData(record) {
     Modal.error({
       title: "Remove this record from the list",
@@ -31,6 +29,10 @@ const List = () => {
   }
 
   const columns = [
+    {
+      title: "user",
+      dataIndex:'username'
+    },
     {
       title: "Date",
       render: (record, type) => {
@@ -99,7 +101,20 @@ const List = () => {
 
   const data = JSON.parse(localStorage.getItem("values"));
 
-  return <Table columns={columns} dataSource={data} />;
+  return (
+    <>
+      <Button
+        block
+        style={{ marginTop: 10 }}
+        className="mr-1"
+        type="primary"
+        onClick={() => history.push("/")}
+      >
+        Logout
+      </Button>
+      <Table columns={columns} dataSource={data} />
+    </>
+  );
 };
 
 export default List;

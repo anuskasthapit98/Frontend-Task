@@ -29,9 +29,6 @@ const AttendenceForm = ({ visible, onCreate, onCancel }) => {
         form={form}
         layout="vertical"
         name="form_in_modal"
-        initialValues={{
-          modifier: "public",
-        }}
       >
         <Form.Item
           label="Username"

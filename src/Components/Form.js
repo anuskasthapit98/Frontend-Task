@@ -7,8 +7,9 @@ import { Form, Button, message, Input } from "antd";
 
 import AttendenceForm from "./Modal";
 
-export default function App() {
+const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [logged, setLogged] = useState([]);
   const history = useHistory();
 
   const showModal = () => {
@@ -28,22 +29,25 @@ export default function App() {
   };
 
   const onFinish = (values) => {
-    history.push("/list");
-    console.log(values);
     const array = JSON.parse(localStorage.getItem("login")) || [];
     array.push(values);
     localStorage.setItem("login", JSON.stringify(array));
+    history.push({
+      pathname: "/list",
+      state: {
+        login: values,
+      },
+    });
     message.success("Login Successful", 4);
   };
 
   const onCreate = (values) => {
     values = preSubmitHandler(values);
-    hideModal();
-
     const array = JSON.parse(localStorage.getItem("values")) || [];
     array.push(values);
     localStorage.setItem("values", JSON.stringify(array));
     message.success("Attendence Submitted Successfully", 4);
+    hideModal();
   };
 
   const [form] = Form.useForm();
@@ -77,16 +81,12 @@ export default function App() {
 
         <Form.Item>
           <Button block type="primary" htmlType="submit">
-           Login
+            Login
           </Button>
         </Form.Item>
       </Form>
 
-      <Button
-        block
-        className="mr-1"
-        onClick={() => showModal()}
-      >
+      <Button block className="mr-1" onClick={() => showModal()}>
         Submit Attendence
       </Button>
       <AttendenceForm
@@ -98,4 +98,6 @@ export default function App() {
       />
     </div>
   );
-}
+};
+
+export default App;
